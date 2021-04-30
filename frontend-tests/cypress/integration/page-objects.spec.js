@@ -52,7 +52,6 @@ describe("Testsuite", () => {
         roomPage.deleteLastRoom()
         indexPage.logoutUser("Login")
         
-
     });
 
     it("Create reservation and verify", () => {

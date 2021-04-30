@@ -1,0 +1,320 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 8,
+    "passes": 7,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-29T15:03:06.759Z",
+    "end": "2021-04-29T15:16:22.682Z",
+    "duration": 47470,
+    "testsRegistered": 8,
+    "passPercent": 87.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "193585e0-d95b-4b53-838e-8dbdd333103c",
+      "title": "",
+      "fullFile": "cypress/integration/hello-percy.spec.js",
+      "file": "cypress/integration/hello-percy.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "84d6632f-7b7f-4be8-a8c5-865cc1d8bcd3",
+          "title": "First example",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test case 1",
+              "fullTitle": "First example Test case 1",
+              "timedOut": null,
+              "duration": 6340,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:3000/login');\ncy.title().should('eq', 'Testers Hotel');\ncy.contains('Login'); // ->> we are at index (login) page!!   \ncy.log('At login page!');\ncy.percySnapshot('index-page');\ncy.get(':nth-child(1) > input').type('tester01');\ncy.get(':nth-child(2) > input').type('GteteqbQQgSr88SwNExUQv2ydb7xuf8c');\ncy.get('.btn').click();\ncy.contains('Welcome');\ncy.wait(3000); // ->> We are at dashboard page    \ncy.log('At dashboard page!');\ncy.percySnapshot('dashboard-page');",
+              "err": {},
+              "uuid": "bb28da2e-fcc2-4cf0-9aa7-a480a86960a6",
+              "parentUUID": "84d6632f-7b7f-4be8-a8c5-865cc1d8bcd3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bb28da2e-fcc2-4cf0-9aa7-a480a86960a6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6340,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "838dcddf-a928-4b78-a695-eeceb40d645d",
+      "title": "",
+      "fullFile": "cypress/integration/page-objects.spec.js",
+      "file": "cypress/integration/page-objects.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "613ae491-fa15-445f-afba-d5ec38ab0ca3",
+          "title": "Testsuite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login and logout",
+              "fullTitle": "Testsuite Login and logout",
+              "timedOut": null,
+              "duration": 3838,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "b9dbd59a-f387-452c-997e-bc72161a4d46",
+              "parentUUID": "613ae491-fa15-445f-afba-d5ec38ab0ca3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create client and verify",
+              "fullTitle": "Testsuite Create client and verify",
+              "timedOut": null,
+              "duration": 4925,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewClients(\"Clients\");\nclientsPage.viewClientNew(\"New Client\");\nclientNewPage.createClient(\"tester\", \"tester@mail.com\", \"01234566789\", \"Clients\");\nclientsPage.verifyLastClient(\"tester\", \"tester@mail.com\", \"01234566789\");\nclientsPage.deleteLastClient();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "49093bac-9f7d-460e-8af9-c81a9429081c",
+              "parentUUID": "613ae491-fa15-445f-afba-d5ec38ab0ca3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create bill and verify",
+              "fullTitle": "Testsuite Create bill and verify",
+              "timedOut": null,
+              "duration": 4168,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewBills(\"Bills\");\nbillPage.viewBillNew(\"New Bill\");\nbillNewPage.createBill(\"9900\", \"Bills\");\nbillPage.verifyLastBill(\"9900\");\nbillPage.deleteLastBill();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "4994610b-bb0a-47b8-b9d5-3017269a96b9",
+              "parentUUID": "613ae491-fa15-445f-afba-d5ec38ab0ca3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create room and verify",
+              "fullTitle": "Testsuite Create room and verify",
+              "timedOut": null,
+              "duration": 5030,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewRooms(\"Rooms\");\nroomPage.viewRoomNew(\"New Room\");\nroomNewPage.createRoom(\"double\", \"546\", \"12\", \"9900\", \"balcony\", \"Rooms\");\nroomPage.verifyLastRoom(\"double\", \"546\", \"12\", \"9900\", \"balcony\");\nroomPage.deleteLastRoom();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "b0c086c9-d41f-465b-a795-70d42d751e0f",
+              "parentUUID": "613ae491-fa15-445f-afba-d5ec38ab0ca3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Create reservation and verify",
+              "fullTitle": "Testsuite Create reservation and verify",
+              "timedOut": null,
+              "duration": 4948,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewReservations(\"Reservations\");\nreservationPage.viewReservationNew(\"New Reservation\");\nreservationNewPage.createReservation(\"2020-05-05\", \"2020-05-10\", \"Jonas Hellman (#1)\", \"Floor 1, Room 102\", \"ID: 1\", \"Reservations\");\nreservationPage.verifyLastReservation(\"2020-05-05\", \"2020-05-10\", \"Jonas Hellman\", \"Room: 1\", \"ID: 1\");\nreservationPage.deleteLastReservation();\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "925fabde-9914-48c9-8e44-2b22beea87f8",
+              "parentUUID": "613ae491-fa15-445f-afba-d5ec38ab0ca3",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Return to home page",
+              "fullTitle": "Testsuite Return to home page",
+              "timedOut": null,
+              "duration": 3403,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexPage.viewBills(\"Bills\");\nbillPage.returnToHomePage(\"Tester Hotel Overview\");\nindexPage.logoutUser(\"Login\");",
+              "err": {},
+              "uuid": "52ec0524-f622-467a-a802-8b0a6faf512f",
+              "parentUUID": "613ae491-fa15-445f-afba-d5ec38ab0ca3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b9dbd59a-f387-452c-997e-bc72161a4d46",
+            "49093bac-9f7d-460e-8af9-c81a9429081c",
+            "4994610b-bb0a-47b8-b9d5-3017269a96b9",
+            "b0c086c9-d41f-465b-a795-70d42d751e0f",
+            "925fabde-9914-48c9-8e44-2b22beea87f8",
+            "52ec0524-f622-467a-a802-8b0a6faf512f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 26312,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "abec0705-4723-4c40-997b-96f54e32901f",
+      "title": "",
+      "fullFile": "cypress/integration/create-bill.js",
+      "file": "cypress/integration/create-bill.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f5785c83-1958-4b84-84f6-0d9e0fc4dece",
+          "title": "Create Bill",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "Create Bill login",
+              "timedOut": null,
+              "duration": 14818,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://localhost:3000\");\ncy.get('h2').should(\"contain\", \"Login\");\ncy.get(':nth-child(1) > input').type(\"tester01\");\ncy.get(':nth-child(2) > input').type(\"GteteqbQQgSr88SwNExUQv2ydb7xuf8c\");\ncy.get(\".btn\").click();\ncy.wait(500);\ncy.get('.username').should(\"contain\", \"Welcome tester01!\");\ncy.get(\"h2\").should(\"contain\", \"Tester Hotel Overview\");\ncy.get(':nth-child(3) > .btn').click();\ncy.get('h2 > div').should(\"contain\", \"Bills\");\ncy.get('h2 > .btn').click();\ncy.get('h2 > div').should(\"contain\", \"New Bill\");\ncy.get('input').type(\"9900\");\ncy.get('.blue').click();\ncy.get(':nth-child(1) > .value').should(\"contain\", \"9900kr\");\ncy.get(':nth-child(1) > .action > img').click();\ncy.get('.menu > :nth-child(2)').click();\ncy.get('.user > .btn').click();\ncy.get('h2').should(\"contain\", \"Login\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: expected '<div.value>' to contain '9900kr'",
+                "estack": "AssertionError: Timed out retrying after 10000ms: expected '<div.value>' to contain '9900kr'\n    at Context.eval (http://localhost:3000/__cypress/tests?p=cypress/integration/create-bill.js:116:38)",
+                "diff": null
+              },
+              "uuid": "ab9ea509-03a7-4e54-af7c-b62d5f029029",
+              "parentUUID": "f5785c83-1958-4b84-84f6-0d9e0fc4dece",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ab9ea509-03a7-4e54-af7c-b62d5f029029"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14818,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

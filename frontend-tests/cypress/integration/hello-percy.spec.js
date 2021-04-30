@@ -5,7 +5,7 @@ describe('First example', () => {
     cy.visit('http://localhost:3000/login')
     cy.title().should('eq','Testers Hotel')
     cy.contains('Login')
-    // ->> we are at index (login) page!!   
+      
     cy.log('At login page!') 
     cy.percySnapshot('index-page')
 
@@ -14,10 +14,35 @@ describe('First example', () => {
     cy.get('.btn').click()
     cy.contains('Welcome')
     cy.wait(3000)
-
-    // ->> We are at dashboard page    
+    
     cy.log('At dashboard page!')
     cy.percySnapshot('dashboard-page')
+
+    cy.get('.blocks > :nth-child(2) > .btn').click()
+    cy.log('At client page!')
+    cy.contains('Clients')
+    cy.percySnapshot('clients page')
+
+    cy.get(':nth-child(3) > .btn').click()
+    cy.log('At bills page!')
+    cy.contains('Bills')
+    cy.percySnapshot('bills page')
+
+    cy.get(':nth-child(4) > .btn').click()
+    cy.log('At reservation page!')
+    cy.contains('Reservations')
+    cy.percySnapshot('reservation page')
+
+    cy.get(':nth-child(1) > .btn').click()
+    cy.log('At room page!')
+    cy.contains('Room')
+    cy.percySnapshot('room page')
+
+    
+    
+    
+
+
 
     
     

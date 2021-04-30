@@ -5,13 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test:vrt":"percy exec cypress run --spec cypress/integration/hello-percy.spec.js"
+    "test:vrt": "percy exec cypress run --spec cypress/integration/hello-percy.spec.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@percy/cli": "*",
     "@percy/cypress": "^3.1.0",
-    "cypress": "^7.1.0"
+    "cypress": "^7.1.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  },
+  "dependencies": {
+    "typescript": "^4.2.4"
   }
 }

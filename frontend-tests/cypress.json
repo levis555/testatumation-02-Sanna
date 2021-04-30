@@ -3,7 +3,15 @@
    "watchForFileChanges":false,
     "defaultCommandTimeout":10000,
 
-    "chromeWebSecurity":false
+    "chromeWebSecurity":false,
+
+    "reporter": "mochawesome",
+    "reporterOptions": {
+    "reportDir": "cypress/results",
+    "overwrite": false,
+    "html": false,
+    "json": true
+  }
 
 }
  
